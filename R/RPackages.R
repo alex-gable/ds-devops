@@ -92,6 +92,7 @@ if(!require(FedData)){install.packages( "FedData" ) }
 if(!require(rethinking)){install.packages( "rethinking" ) }
 if(!require(greta)){install.packages( "greta" ) }
 if(!require(bayesplot)){install.packages( "bayesplot" ) }
+if(!require(bayesm)){install.packages( "bayesm" ) }
 if(!require(fractal)){install.packages( "fractal" ) }
 if(!require(fractaldim)){install.packages( "fractaldim" ) }
 if(!require(Rwave)){install.packages( "Rwave" ) }
