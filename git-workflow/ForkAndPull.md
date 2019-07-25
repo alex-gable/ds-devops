@@ -1,8 +1,12 @@
+# Fork And Pull Git Workflow
 
-upstream   ------> myfork
+Some notes on forking and pulling.
 
+This is how we developed the nlp-modelling toolbox and will be using that repo as an example here.
 
+The idea of a fork and pull model is that there is one maintainer of a repo and developers fork that repository, make changes, and then issue pull requests. All of this is very easy using github so we''ll just walk through that here.
 
+## Synch with the upstream master repository
 git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
 git fetch upstream
 git checkout master
@@ -56,3 +60,14 @@ Fast-forward
 (snowflakes) bruce@bruce-NUC8i7BEH:~/work/nlp-modelling$
 
 ```
+Now that you have the changes locally go ahead and
+```
+git add .
+git commit -m "message"
+git push
+```
+
+## Issue a pull requests
+After doing development on the synched fork we simple use the github web client to issue a pull request. It will happen automatically if there are no merge conflicts.
+
+![](pull-request.png)
