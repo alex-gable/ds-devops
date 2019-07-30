@@ -77,8 +77,12 @@ Run ```docker build .``` to create a Docker image from a Dockerfile.
 
 Make sure the requirements.txt is in the build location   
 The simple flask one has only one line : ```Flask==0.10.1```
-To build and push the image to DockerHub : 
+To build and push the image to DockerHub :
 ```
 docker build -t wavescholar/test .
 docker push wavescholar/test:latest
+```
+Now run the image.
+```
+docker run -p 8888:5000 wavescholar/test
 ```

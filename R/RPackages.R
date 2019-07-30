@@ -1,7 +1,8 @@
 local({r <- getOption("repos") r["CRAN"] <- "http://cran.r-project.org"  options(repos=r)})
 
-devtools::install_github("r-dbi/odbc")
 if(!require(devtools)){install.packages( "devtools" ) }
+devtools::install_github("r-dbi/odbc")
+
 if(!require(base64enc)){install.packages( "base64enc" ) }
 if(!require(profvis)){install.packages( "profvis" ) }
 if(!require(profmem)){install.packages( "profmem" ) }
@@ -124,8 +125,8 @@ if(!require(fs)){install.packages( "fs" ) }
 if(!require(tidygraph)){install.packages( "tidygraph" ) }
 if(!require(usethis)){install.packages( "usethis" ) }
 if(!require(pkgdown)){install.packages( "pkgdown" ) }
-if(!require(revealjs)){install.packages( "revealjs" ) }
 
+install.packages("revealjs", type = "source")
 install.packages("INLA", repos=c(getOption("repos"), INLA="https://inla.r-inla-download.org/R/stable"), dep=TRUE)
 
 #Rwave dependency viewer.  Really helpful for R development
