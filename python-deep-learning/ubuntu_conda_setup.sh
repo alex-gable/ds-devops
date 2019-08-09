@@ -21,6 +21,8 @@ conda activate snowflakes
 conda install -y pip
 conda install -y Flake8
 conda install -y sphinx
+conda install -y pytest-cov pytest
+pip install codecov
 conda install -y tensorflow
 conda install -y IPython
 conda install -y jupyter
