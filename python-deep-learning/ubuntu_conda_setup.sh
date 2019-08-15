@@ -29,6 +29,7 @@ conda install -y jupyter
 conda install -y keras
 conda install -y -c quantopian pandas-datareader
 conda install -y matplotlib
+conda install -y plotly
 conda install -y scipy
 conda install -y scikit-learn
 conda install -y numpy
