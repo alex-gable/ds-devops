@@ -34,6 +34,7 @@ conda install -y scipy
 conda install -y scikit-learn
 conda install -y numpy
 conda install -y Cython
+pip install wget
 #Misc Packages for some of the deep learning examples
 pip install --upgrade tensorflow-probability
 
