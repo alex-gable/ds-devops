@@ -50,6 +50,8 @@ docker run -it busybox sh
 docker ps -a
 docker rm 9224d285f0da
 docker container prune
+docker stop $(docker ps -a -q) #STOP ALL
+docker rm $(docker ps -a -q) #REMOVE ALL
 ```
 
 ##Base Images
@@ -85,4 +87,39 @@ docker push wavescholar/test:latest
 Now run the image.
 ```
 docker run -p 8888:5000 wavescholar/test
+```
+
+
+
+## More complicated Dockerfile
+
+```
+FROM centos:7
+
+RUN yum -y update && \
+
+yum -y install httpd && \
+
+yum clean all
+
+# Use an official Python runtime as a parent image
+FROM python:2.7-slim
+
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+COPY . /app
+
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+# Make port 80 available to the world outside this container
+EXPOSE 80
+
+# Define environment variable
+ENV NAME World
+
+# Run app.py when the container launches
+CMD ["python", "app.py"]
 ```

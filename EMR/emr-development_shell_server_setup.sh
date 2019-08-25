@@ -163,5 +163,3 @@ set-option -g default-terminal "screen-256color"
         "location_query": "oslo, norway"
     }
 },
-
-

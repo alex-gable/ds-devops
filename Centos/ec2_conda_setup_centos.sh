@@ -1,14 +1,15 @@
 sudo yum -y update
-
-wget https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
+sudo yum -y install wget
+wget https://repo.anaconda.com/archive/Anaconda3-2019.07-Linux-x86_64.sh
+#https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh
 
 #INTERACTIVE!
-bash Anaconda3-5.3.0-Linux-x86_64.sh
-#LOGOUT AND BACK IN 
+bash Anaconda3-2019.07-Linux-x86_64.sh
+#LOGOUT AND BACK IN
 
 conda upgrade setuptools
 
-conda create -n snowflakes 
+conda create -n snowflakes
 
 conda activate snowflakes
 
@@ -26,7 +27,7 @@ conda install -y scipy
 conda install -y scikit-learn
 conda install -y numpy
 conda install -y Cython
-#Misc Packages for some of the deep learning examples  
+#Misc Packages for some of the deep learning examples
 pip install --user --upgrade tfp-nightly
 conda install -y seaborn
 conda install -y dill
@@ -38,7 +39,7 @@ conda install -y cvxopt
 conda install -y -c conda-forge lapack
 conda install -c cvxgrp cvxpy
 
-conda install -y -c conda-forge pymanopt 
+conda install -y -c conda-forge pymanopt
 conda install -y -c conda-forge autograd
 
 #PyEMD is a Python wrapper for Ofir Pele and Michael Werman's implementation of the Earth Mover's Distance that allows it to be used with NumPy
