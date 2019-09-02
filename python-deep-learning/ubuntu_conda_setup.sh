@@ -89,6 +89,7 @@ conda install -y -c conda-forge google-cloud-storage
 #NLP
 conda install -y gensim
 conda install -y nltk
+pip install stanfordnlp
 
 conda install -y spacy
 python -m spacy download en

@@ -52,6 +52,9 @@ docker rm 9224d285f0da
 docker container prune
 docker stop $(docker ps -a -q) #STOP ALL
 docker rm $(docker ps -a -q) #REMOVE ALL
+docker cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|-
+docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH
+docker exec -it CONTAINER #log into
 ```
 
 ##Base Images
